@@ -1,0 +1,9 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "qweasd",
+    "database": "MakeFitDB",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
