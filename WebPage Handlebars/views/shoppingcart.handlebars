@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="column1">
+    <div class="container shop_form">
+      <form method="POST" action="/shop/buy">
+      
+        <div class="row">
+          <div class="column2">
+            <h3>Billing Address</h3>
+            <label class="shop_label" for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" class="txtinput" id="fname" name="firstname" value=" {{user.Name}} {{user.Surname}}">
+            <label class="shop_label" for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" class="txtinput" id="email" name="email" value="{{user.email}}">
+            <label class="shop_label" for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" class="txtinput" id="adr" name="address" placeholder="Your Address">
+            <label class="shop_label" for="city"><i class="fa fa-institution"></i> City</label>
+            <input type="text" class="txtinput" id="city" name="city" placeholder="Your City">
+            {{#each basket}}
+            <input type="hidden" name="product[][prodname]" value="{{ Product_Name }}">
+            <input type="hidden" name="product[][prodquantity]" value="{{ Quantity }}">
+            {{/each}}
+            <div class="row">
+              <div class="column2">
+                <label class="shop_label" for="state">State</label>
+                <input type="text" class="txtinput" id="state" name="state" placeholder="Your State">
+              </div>
+              <div class="column2">
+                <label class="shop_label" for="zip">Zip Code</label>
+                <input type="text" class="txtinput" id="zip" name="zip" placeholder="Your City ZipCode">
+              </div>
+            </div>
+          </div>         
+        </div>
+        <input type="submit" value="Buy Products" class="cart_btn">
+      </form>
+    </div>
+  </div>
+  <div class="column3">
+    <div class="container shop_form">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>{{basket.length}}</b></span></h4>
+      {{#each basket}}
+      <p><a href="#">{{Product_Name}} ({{Quantity}})</a> <span class="cart_price">{{Price}}</span></p>
+      {{/each}}
+      
+      <hr>
+      <p>Total <span class="cart_price" id="total_price" style="color:black"></span></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,143 @@
+<!--admin-->
+      <div class="row">
+        <div class="column left">
+          <div class="container admin_btns">
+              <button id="add_product">Add Product</button> 
+              <button id="delete_product">Delete Product</button> 
+              </br>
+              <button id="add_trainer">Add Trainer</button> 
+              <button id="delete_trainer">Delete Trainer</button>
+              </br>
+              <button id="add_gym">Add Gym</button> 
+              <button id="delete_gym">Delete Gym</button> 
+              </br>
+              <button id="add_diet">Add Diet</button> 
+              <button id="delete_diet">Delete Diet</button> 
+          </div>
+        </div>
+        <div class="column right">
+
+            <div id="add_product_form" style="display:none">
+                  <form method="POST" action="/shop/add">
+                      <input type="text" name="name" placeholder="Product Name">
+                      <br>
+                      <input type="text" name="quantity" placeholder="Quantity (integer)">
+                      <br>
+                      <input type="text" name="price" placeholder="Price(float number)">
+                      <br>
+                      <input type="text" name="sdescription" placeholder="Short Description">
+                      <br>
+                      <input type="text" name="ldescription" placeholder="Long Description">
+                      <br><br>
+                      <input type="submit" value="Submit">
+                  </form>
+            </div>
+
+            <div id="delete_product_form" style="display:none">
+                  <form method="POST" action="/shop/delete">
+                    <select name="id">
+                        {{#each product}}
+                        <option value="{{id}}">{{Name}}</option>
+                        {{/each}}
+                    </select>
+                      <br><br>
+                      <input type="submit" value="Submit">
+                  </form>
+            </div>
+
+            <div id="add_trainer_form" style="display:none">
+                  <form method="POST" action="/trainer/add">
+                  <label>User:</label>
+                    <select name="userid">
+                        {{#each user}}
+                        <option value="{{id}}">{{id}} {{Name}}</option>
+                        {{/each}}
+                    </select>
+                    <br>
+                      <input type="number" step="00.1" name="Salary" placeholder="Salary (float number)">
+                      <br>
+                      <input type="text" name="Title" placeholder="Title">
+                      <br>
+                      <input type="text" name="Short_Description" placeholder="Short Description">
+                      <br>
+                      <input type="text" name="Long_Description" placeholder="Long Description">
+                      <br>
+                      <input type="number" name="Price" placeholder="Price">
+                      <br>
+                      <label>Gym: </label>
+                    <select name="gymid">
+                        {{#each gym}}
+                        <option value="{{id}}">{{Name}}</option>
+                        {{/each}}
+                    </select>
+                      <br>
+                      <input type="submit" value="Submit">
+                  </form>
+            </div>
+            
+            <div id="delete_trainer_form" style="display:none">
+                <form method="POST" action="/trainer/delete">
+                    <select name="id">
+                    {{#each trainer}}
+                    <option value="{{id}}"> {{id}}</option>
+                    {{/each}}
+                    </select>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            
+            <div id="add_gym_form" style="display:none">
+                <form method="POST" action="/gym/add">
+                    <input type="text" name="name" placeholder="Product Name">
+                    <br>
+                    <input type="text" name="address" placeholder="Address">
+                    <br>
+                    <input type="number" name="capacity" placeholder="Capacity (integer)">
+                    <br>
+                    <input type="number" name="subscription" step="00.1" placeholder="Subscription (float number)">
+                    <br>
+                    <input type="text" name="description" placeholder="Description">
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="delete_gym_form" style="display:none">
+                <form method="POST" action="/gym/delete">
+                    <select name="id">
+                        {{#each gym}}
+                        <option value="{{id}}">{{Name}}</option>
+                        {{/each}}
+                    </select>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="add_diet_form" style="display:none">
+                <form method="POST" action="/diet/add">
+                    <input type="text" name="Diet_Name" placeholder="Diet Name">
+                    <br>
+                    <input type="text" name="Meal1" placeholder="Meal 1">
+                    <br>
+                    <input type="text" name="Meal2" placeholder="Meal 2">
+                    <br>
+                    <input type="text" name="Meal3" placeholder="Meal 3">
+                    <br>
+                    <input type="number" name="Calories" placeholder="Calories (integer)">
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+            <div id="delete_diet_form" style="display:none">
+                <form method="POST" action="/gym/delete">
+                    <select name="id">
+                        {{#each diet}}
+                        <option value="{{id}}">{{Diet_Name}}</option>
+                        {{/each}}
+                    </select>
+                    <br><br>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+      </div>

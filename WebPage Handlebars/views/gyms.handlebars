@@ -1,0 +1,22 @@
+<!--main-->
+{{#each gym}}
+<div class="container items">
+    <div class="image-wrapper">
+        <img src="/css/fitit.png" class="round-image">
+    </div>
+    <div class ="products-form-wrapper">
+        <div class="container text">
+            <label class = "firstlabel">Name : <label id="secondlabel" name="Name">{{Name}}</label></label> &nbsp &nbsp
+            <label class = "firstlabel">Address : <label id="secondlabel" name="Surname">{{Address}}</label></label> <br>
+            <label class = "firstlabel">Capacity : <label id="secondlabel" name="Capacity">{{Capacity}}</label></label> <br>
+            <label class = "firstlabel">Subscription : <label id="secondlabel">{{Subscription}}</label></label>
+        </div>
+        <div class="hidden-form">
+            <form action="/view/gyms" method="POST">
+                <input type="hidden" name="Name" value="{{Name}}">
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">View Gym</button>
+            </form>
+        </div>
+    </div>
+</div>
+{{/each}}

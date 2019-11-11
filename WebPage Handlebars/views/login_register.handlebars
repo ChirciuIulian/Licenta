@@ -1,0 +1,28 @@
+<!--login-->
+<div class="login-page">
+	<div class="login-form">
+        <form action="/signup" method="post" class="register-form">
+		   	<input type="text" name="name" placeholder="Name" />
+			<input type="text" name="surname" placeholder="Surname" />   
+			<select name="gender" class="form-control">
+				<option value="M" selected="selected">Male</option>
+				<option value="F">Female</option>
+			</select>
+			<input type="text" name="email" placeholder="email" />
+			<input type="text" name="phone" placeholder="phone number" />
+		   	<input type="text" name="cusername" placeholder="username" />
+		   	<input type="password" name="cpassword" placeholder="password" />
+		   	<input type="password" name="password" placeholder="confirm-password" />
+		   	<input type="submit" class="btn" value="Create"></input>
+		  	<p class="login-message"> Already have an account? <a href="#"> Login </a> </p>
+		</form>
+		  
+		<form action="/login" method="post" class="login-form">
+		    <input type="text" name="username" placeholder="username" />
+			<input type="password" name="password" placeholder="password" />
+			<input type="submit" class="btn" value="Login"></input>
+			<p class="login-message"> Don't have an account yet? <a href="#"> Register </a> </p> <br><br>
+		</form>
+			<a href="/forgot/pass">Forgot Password? </a>
+	</div>
+</div>

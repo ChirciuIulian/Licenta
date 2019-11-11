@@ -1,0 +1,130 @@
+<html>
+
+    <head>
+        <title>Hello {{user.Name}} {{product.Name}}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href = "css/admin.css" rel="stylesheet" type="text/css">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+        {{{ body }}}
+    </body>
+
+    
+<script>
+    $(document).ready(function() {
+      $("#add_product").click(function(){
+        $("#add_product_form").show();
+        $("#delete_product_form").hide();
+        $("#add_trainer_form").hide();
+        $("#delete_trainer_form").hide();
+        $("#add_gym_form").hide();
+        $("#delete_gym_form").hide();
+        $("#add_diet_form").hide();
+        $("#delete_diet_form").hide();
+    });
+});
+</script>
+<script>
+  $(document).ready(function() {
+    $("#delete_product").click(function(){
+    $("#add_product_form").hide();
+    $("#delete_product_form").show();
+    $("#add_trainer_form").hide();
+    $("#delete_trainer_form").hide();
+    $("#add_gym_form").hide();
+    $("#delete_gym_form").hide();
+    $("#add_diet_form").hide();
+    $("#delete_diet_form").hide();
+  });
+});
+</script>
+<script>
+  $(document).ready(function() {
+    $("#add_trainer").click(function(){
+    $("#add_product_form").hide();
+    $("#delete_product_form").hide();
+    $("#add_trainer_form").show();
+    $("#delete_trainer_form").hide();
+    $("#add_gym_form").hide();
+    $("#delete_gym_form").hide();
+    $("#add_diet_form").hide();
+    $("#delete_diet_form").hide();
+  });
+});
+</script>
+<script>
+  $(document).ready(function() {
+    $("#delete_trainer").click(function(){
+    $("#add_product_form").hide();
+    $("#delete_product_form").hide();
+    $("#add_trainer_form").hide();
+    $("#delete_trainer_form").show();
+    $("#add_gym_form").hide();
+    $("#delete_gym_form").hide();
+    $("#add_diet_form").hide();
+    $("#delete_diet_form").hide();
+  });
+});
+</script>
+<script>
+  $(document).ready(function() {
+    $("#add_gym").click(function(){
+    $("#add_product_form").hide();
+    $("#delete_product_form").hide();
+    $("#add_trainer_form").hide();
+    $("#delete_trainer_form").hide();
+    $("#add_gym_form").show();
+    $("#delete_gym_form").hide();
+    $("#add_diet_form").hide();
+    $("#delete_diet_form").hide();
+  });
+});
+</script>
+<script>
+  $(document).ready(function() {
+    $("#delete_gym").click(function(){
+    $("#add_product_form").hide();
+    $("#delete_product_form").hide();
+    $("#add_trainer_form").hide();
+    $("#delete_trainer_form").hide();
+    $("#add_gym_form").hide();
+    $("#delete_gym_form").show();
+    $("#add_diet_form").hide();
+    $("#delete_diet_form").hide();
+  });
+});
+</script>
+<script>
+  $(document).ready(function() {
+    $("#add_diet").click(function(){
+    $("#add_product_form").hide();
+    $("#delete_product_form").hide();
+    $("#add_trainer_form").hide();
+    $("#delete_trainer_form").hide();
+    $("#add_gym_form").hide();
+    $("#delete_gym_form").hide();
+    $("#add_diet_form").show();
+    $("#delete_diet_form").hide();
+  });
+});
+</script>
+<script>
+  $(document).ready(function() {
+    $("#delete_diet").click(function(){
+    $("#add_product_form").hide();
+    $("#delete_product_form").hide();
+    $("#add_trainer_form").hide();
+    $("#delete_trainer_form").hide();
+    $("#add_gym_form").hide();
+    $("#delete_gym_form").hide();
+    $("#add_diet_form").hide();
+    $("#delete_diet_form").show();
+  });
+});
+</script>
+</html>

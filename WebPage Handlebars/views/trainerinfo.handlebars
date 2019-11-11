@@ -1,0 +1,36 @@
+<!--main-->
+<div class="container portfolio">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="heading">				
+				<img src="https://image.ibb.co/cbCMvA/logo.png" />
+			</div>
+		</div>	
+	</div>
+	<div class="bio-info">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="bio-image">
+							<img src="grey.png" alt="image" />
+						</div>			
+					</div>
+				</div>	
+			</div>
+			<div class="col-md-6">
+				<div class="bio-content">
+					<h1>{{ trainer.Title }}</h1>
+					<h6>{{ trainer.Long_Description }}</h6><br><br>
+					<h5>Gym: {{gyms.Name}}</h5>
+				</div>
+			</div>
+			<div class="subscribe_form">
+            	<form action="/trainer/subscribe" method="POST">
+                	<input type="hidden" name="trainerid" value="{{trainer.UserId}}">
+                	<button name="submit" type="submit" id="trainersub_btn" data-submit="...Sending">Subscribe</button>
+            	</form>
+        	</div>
+		</div>	
+	</div>
+</div>

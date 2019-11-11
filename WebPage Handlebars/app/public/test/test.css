@@ -1,0 +1,4 @@
+.well { margin: 20px; } 
+.well > * {
+    margin: 25px;
+}

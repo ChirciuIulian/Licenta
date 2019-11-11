@@ -1,0 +1,43 @@
+<!--main-->
+{{#if user.isTrainer}}
+{{#each diet}}
+<div class="container items">
+    <div class="image-wrapper">
+        <img src="/css/fitit.png" class="round-image">
+    </div>
+    <div class ="products-form-wrapper">
+        <div class="container text">
+            <label class = "firstlabel">Diet Name : <label id="secondlabel" name="Diet_Name">{{Diet_Name}}</label></label> &nbsp &nbsp
+            <label class = "firstlabel">Meal1 : <label id="secondlabel" name="Meal1">{{Meal1}}</label></label> <br>
+            <label class = "firstlabel">Meal2 : <label id="secondlabel" name="Meal2">{{Meal2}}</label></label> <br>
+            <label class = "firstlabel">Meal3 : <label id="secondlabel">{{Meal3}}</label></label> <br>
+            <label class = "firstlabel">Calories : <label id="secondlabel">{{Calories}}</label></label> <br>
+        </div>
+        <div class="hidden-form">
+            <form action="/diet/asign" method="POST">
+                <input type="hidden" name="dietid" value="{{id}}">
+                <label>User:</label>
+                <select name="userid">
+                    {{#each ../subscribtor}}
+                    <option value="{{id}}">{{Name}} {{Surname}}</option>
+                    {{/each}}
+                </select>
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Assign Diet</button>
+            </form>
+        </div>
+    </div>
+</div>
+{{/each}}
+{{else}}
+    <div class ="diet-wrapper">
+        {{#each selectediet}}
+        <div class="container text">
+            <h4>Your personal trainer has assigned you the {{Diet_Name}} Diet.</h4><br>
+            <h3><b>Meal 1: {{Meal1}}</b></h3><br>
+            <h3><b>Meal 2: {{Meal2}}</b></h3><br>
+            <h3><b>Meal 3: {{Meal3}}</b></h3><br>
+            <h3><b>Calories: {{Calories}}</b></h3><br>
+        </div>
+        {{/each}}
+    </div>
+{{/if}}

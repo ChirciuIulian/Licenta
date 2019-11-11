@@ -1,0 +1,22 @@
+  <div id="w">
+    <div id="content" class="clearfix">
+      <div id="userphoto"><img src="/css/avatar.png" alt="default avatar"><br><a href="#">Change Profile Picture</a></div>
+      <a href="/change/pass">Change password</a>
+      <h1>Hello {{useraccount.Name}} {{useraccount.Surname}}</h1>
+      <section id="settings">
+        <p>Edit your user settings: <img src="/css/edit.png" alt="*Edit*"></p>
+        
+        <p class="setting"><span>Full Name</span> {{ useraccount.Name }} {{ useraccount.Surname }}</p>
+        
+        <p class="setting"><span>Gender</span> {{ useraccount.Gender }}</p>
+        
+        <p class="setting"><span>E-mail Address</span> {{ useraccount.email }}</p>
+        
+        <p class="setting"><span>Phone Number</span> {{ useraccount.phone }}</p>
+        
+        <p class="setting"><span>Gym Subscription</span> {{ useraccount.GymId }}</p>
+
+        <p class="setting"><span>Trainer Subscription</span> {{ useraccount.TrainerId }}</p>
+      </section>
+    </div>
+  </div>

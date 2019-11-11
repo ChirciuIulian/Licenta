@@ -1,0 +1,86 @@
+<html>
+
+    <head>
+        <title>{{ title }}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href = "/css/homepage.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class = "bg">
+            <div class = "container">
+            <nav class="navbar navbar-expand-md first-navbar">
+                    <div class="navbar-collapse collapse w-100">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link fas fa-home" href="/home"> Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fas fa-comments" href="/contact"> Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-collapse collapse w-100 dual-collapse2">
+                        <ul class="navbar-nav ml-auto">
+                            {{#if logged}}
+                            <li class="nav-item active">
+                                <a class="nav-link fas fa-shopping-cart" href="/shopping/cart">Cart</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fas fa-address-card" href="/account"> Account</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fas fa-user" href="/logout"> Log-Out</a>
+                            </li>
+                            {{else}}
+                            <li class="nav-item">
+                                <a class="nav-link fas fa-user" href="/login"> Login</a>
+                            </li>
+                            {{/if}}
+                        </ul>
+                    </div>
+                </nav>
+                <nav class="navbar navbar-expand-md second-navbar">
+                    <div class="navbar-collapse collapse w-100">
+                        <ul class="navbar-nav mx-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link fas fa-shopping-cart" href="/shop"> Shop</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fas fa-walking" href="/trainers"> Trainers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fas fa-utensils" href="/diet"> Diet</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link fas fa-dumbbell" href="/gyms"> Gyms</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <div class="container-fluid middle-action">
+                {{{ body }}}
+            </div>
+        </div>
+    </body>
+</html>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        findTotal();
+    });
+
+    function findTotal(){
+        var arr = document.getElementsByClassName("cart_price").value
+        var tot=0;
+        for(var i=0;i<arr.length;i++){
+            if(parseInt(arr[i].value))
+            tot += parseInt(arr[i].value);
+    }
+    document.getElementById("total_price").value = tot;
+}
+
+</script>

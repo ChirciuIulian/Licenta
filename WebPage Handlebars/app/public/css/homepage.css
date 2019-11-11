@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+/* MAIN HANDLEBAR */
+.bg {
+  background: #8E0E00;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, rgb(59, 58, 56), #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, rgb(59, 58, 56), #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/* NAVBAR * \/\/\/\/\/\/\/\/ */
+.first-navbar{
+  box-shadow: 3px 6px 8px 3px rgba(0, 0, 0, 0.3);
+}
+
+.first-navbar a{
+  font-size: 100%;
+}
+
+.second-navbar{
+  box-shadow: 3px 6px 8px 3px rgba(0, 0, 0, 0.3);
+}
+
+.second-navbar a{
+  font-size: 150%;
+}
+
+.navbar a{
+	color: white;
+	min-width: 154px;
+	text-decoration: none;
+	padding: 20px;
+	text-align: center;
+}
+
+.navbar li {
+  padding-left: 25px;
+}
+
+.navbar li :hover{
+  color: white;
+  background-color: black;
+  border-radius: 30%;
+  padding: auto;
+}
+
+/* MIDDLE PRODUCTS * \/\/\/\/\/\/\/ */
+
+.middle-action{
+  height: 100%;
+  margin-top: 15px;
+  overflow: scroll;
+  box-shadow: 8px 8px 8px 8px rgba(0.3, 0.3, 0.3, 0.3);
+}
+  
+ /* TRAINER HANDLEBAR */
+ 
+ .items{
+  border-radius: 10%;
+  height: 200px;
+  margin-top: 15px;
+  border-spacing: 10px;
+  background-color: rgb(61, 60, 60);
+}
+
+.image-wrapper{
+  width: 17%;
+  height: 90%;
+  float: left;
+}
+
+.round-image{
+  width:100%;
+  height: 80%;
+  margin-top: 15%;
+  border-radius: 45%;
+}
+
+.products-form-wrapper{
+  width: 80%;
+  height: 90%;
+  float: right;
+  background-color:#4d4d4d;
+  border-radius: 10%;
+  margin-top: 1%;
+  position: relative;
+}
+
+#contact-submit {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-image: linear-gradient(to right, #8E0E00 0%, rgb(59, 58, 56) 51%, #8E0E00 100%);
+  flex: 1 1 auto;
+  padding: 7px 14px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px grey;
+  border-radius: 10px;
+}
+  
+#contact-submit:hover {
+  background-position: right center;
+}
+  
+#contact-submit:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+label{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color:white;
+}
+
+.text{
+  margin-top: 20px !important;
+  width:84% !important;
+  float: left !important;
+}
+
+#secondlabel{
+  color:orange;
+}
+
+#quantity_text{
+  position: absolute;
+  top:85px;
+  right:70px;
+  width: 40px;
+}
+
+/* trainerinfo  \/\/\/\/\/\/ */
+.portfolio{
+  padding:6%;
+  text-align:center;
+}
+.heading{
+  background: #fff;
+  padding: 1%;
+  text-align: left;
+  box-shadow: 0px 0px 4px 0px #545b62;
+}
+.heading img{
+  width: 10%;
+}
+.bio-info{
+  padding: 5%;
+  background:#fff;
+  box-shadow: 0px 0px 4px 0px #b0b3b7;
+}
+.name{
+  font-family: 'Charmonman', cursive;
+  font-weight:600;
+}
+.bio-image{
+  text-align:center;
+}
+.bio-image img{
+  border-radius:50%;
+  width: 250px;
+  height: 250px;
+}
+.bio-content{
+  text-align:left;
+}
+.bio-content p{
+  font-weight:600;
+  font-size:30px;
+}
+
+.subscribe_form{
+  margin-top: 20px;
+  margin-left: 110px;
+}
+
+#trainersub_btn {
+  margin-top: 10%;
+  background-image: linear-gradient(to right, #8E0E00 0%, rgb(59, 58, 56) 51%, #8E0E00 100%);
+  flex: 1 1 auto;
+  padding: 12px 100px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px grey;
+  border-radius: 10px;
+}
+  
+#trainersub_btn:hover {
+  background-position: right center;
+}
+  
+#trainersub_btn:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* SHOPING CART  \/\/\/\/\/\/\/\/ */
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.column3 {
+  -ms-flex: 25%; 
+  flex: 25%;
+}
+
+.column2 {
+  -ms-flex: 50%; 
+  flex: 50%;
+}
+
+.column1 {
+  -ms-flex: 75%; 
+  flex: 75%;
+}
+
+.column3,
+.column2,
+.column1 {
+  padding: 0 16px;
+}
+
+.shop_form {
+  background-color: grey;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+.txtinput {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.shop_label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.cart_btn {
+  background-image: linear-gradient(to right, #8E0E00 0%, rgb(59, 58, 56) 51%, #8E0E00 100%);
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-position: right center;
+}
+
+a {
+  color: white;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.cart_price {
+  float: right;
+  color: white;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .column3 {
+    margin-bottom: 20px;
+  }
+}
+
+.diet-wrapper{
+  width: 90%;
+  height: 75%;
+  background-color: #545b62;
+}

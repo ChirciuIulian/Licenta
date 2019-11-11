@@ -1,0 +1,23 @@
+<!--main-->
+{{#each trainer}}
+<div class="container items">
+    <div class="image-wrapper">
+        <img src="/css/fitit.png" class="round-image">
+    </div>
+    <div class ="products-form-wrapper">
+        <div class="container text">
+            <label class = "firstlabel">Name : <label id="secondlabel" name="Name">{{Name}}</label></label>
+            <label class = "firstlabel">Surname : <label id="secondlabel" name="Surname">{{Surname}}</label></label> <br>
+            <label class = "firstlabel">Gen : <label id="secondlabel" name="Gender">{{Gender}}</label></label> <br>
+            <label class = "firstlabel">E-mail : <label id="secondlabel">{{ email }}</label></label> &nbsp &nbsp
+            <label class = "firstlabel">Phone Number : <label id="secondlabel">{{ phone }}</label></label>
+        </div>
+        <div class="hidden-form">
+            <form action="/view/trainer" method="POST">
+                <input type="hidden" name="id" value="{{id}}">
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">View Profile</button>
+            </form>
+        </div>
+    </div>
+</div>
+{{/each}}

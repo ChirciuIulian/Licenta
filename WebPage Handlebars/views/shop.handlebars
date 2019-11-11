@@ -1,0 +1,23 @@
+<!--main-->
+{{#each product}}
+<div class="container items">
+    <div class="image-wrapper">
+        <img src="/css/fitit.png" class="round-image">
+    </div>
+    <div class ="products-form-wrapper">
+        <div class="container text">
+            <label class = "firstlabel">Product : <label id="secondlabel" name="Name">{{Name}}</label></label> <br>
+            <label class = "firstlabel">Quantity : <label id="secondlabel" name="Quantity">{{Quantity}}</label></label> <br>
+            <label class = "firstlabel">Description : <label id="secondlabel">{{Short_Description}}</label></label>
+        </div>
+        <div class="hidden-form">
+            <form action="/shopping/cart/add" method="POST">
+                <input type="hidden" name="pname" value="{{Name}}">
+                <input type="text" id="quantity_text" name="quantity" placeholder="1">
+                <input type="hidden" name="price" value="{{Price}}">
+                <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Add to Basket</button>
+            </form>
+        </div>
+    </div>
+</div>
+{{/each}}

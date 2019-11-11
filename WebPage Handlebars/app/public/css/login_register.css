@@ -1,0 +1,103 @@
+body {
+    /* The image used */
+    background-image: url("bulky.jpg");
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .login-page{
+     float: left;
+     width: 380px;
+     padding: 6% 0 0;
+     margin: auto;
+     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+     border-radius: 20%;
+     background-color: rgba(130, 130, 130, 0.5);
+  }
+  
+  .login-form{
+    position: relative;
+    z-index: 1;
+    background: transparent;
+    margin: 0 auto 70px;
+    text-align: center;
+  }
+  
+  .login-form input{
+    font-family: "roboto", sans-serif;
+    color: white;
+    border: 0;
+    outline: 1;
+    background: black;
+    width: 50%;
+    margin: 0 0 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+  
+  .login-form input:hover {
+   border:0;
+  }
+  
+  .form-control{
+    font-family: "roboto", sans-serif;
+    color: white;
+    border: 0;
+    outline: 1;
+    background: black;
+    width: 50%;
+    margin: 0 0 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 12px;
+  }
+  
+  ::placeholder {
+    color: #c9cdd3; /*For Chrome, Firefox, Opera and Safari*/
+    opacity: 1; /*For FireFox only*/
+  }
+  
+  .login-form .login-message{
+    margin: 14px 0 0 ;
+      font-size: 16px;
+  }
+  
+  .login-form .login-message a{
+    text-decoration: none;
+  }
+  
+  .login-form .register-form{
+      display: none;
+  }
+  
+  .login-message a{
+    background-color: #f44336;
+    color: white;
+    padding: 10px 23px;
+    display: inline-block;
+  }
+  
+  .btn {
+    font-family: "roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #4CAF50 !important;
+    width: 100%;
+    border: 0;
+    padding: 8px;
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 8%;
+  }
+  
+  .btn:hover{
+    background: #00FF7F !important;
+  }
